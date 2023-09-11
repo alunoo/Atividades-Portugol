@@ -12,7 +12,7 @@ programa {
   funcao operacao(cadeia trocaTemperatura){
     limpa()
     escreva("CONVERSÃO ESCOLHIDA: \n", trocaTemperatura, "\n")
-    escreva("digite a temperatura: \t")
+    escreva("Digite a temperatura: \t")
     leia(fator1)
 
   }
@@ -39,7 +39,7 @@ programa {
   funcao inicio() {
     enquanto (reiniciar) {
       calcular()
-      escreva("\ncalcular novamente? digite 'verdadeiro' para sim e 'falso' para não:\n")
+      escreva("\nCALCULAR NOVAMENTE? DIGITE 'verdadeiro' PARA SIM E 'falso' PARA NÃO: \n")
       leia(reiniciar)
     }
   }
