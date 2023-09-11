@@ -11,7 +11,7 @@ programa {
 //função que vai perguntar a temperatura que o usuario quer converter
   funcao operacao(cadeia trocaTemperatura){
     limpa()
-    escreva("Qual temperatura deseja converter?\n", trocaTemperatura, "\n")
+    escreva("CONVERSÃO ESCOLHIDA: \n", trocaTemperatura, "\n")
     escreva("digite a temperatura: \t")
     leia(fator1)
 
