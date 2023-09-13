@@ -18,7 +18,7 @@ programa {
       leia(simnao)
       limpa()
 
-      se(simnao == "s" ou simnao == "sim"){
+           se(simnao == "s" ou simnao == "sim" ou simnao == "S" ou simnao == "SIM"){
         reiniciar = verdadeiro
       }
 
