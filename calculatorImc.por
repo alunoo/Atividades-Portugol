@@ -10,9 +10,27 @@ programa {
       real result // variavel que guarda o resultado do IMC
       logico reiniciar = verdadeiro
 
+  funcao simnao(){
+      cadeia simnao
+
+      escreva("\nCalcular novamente? digite 's' ou 'sim' para continuar calculando, ou qualquer outra tecla para finalizar:\n")
+      escreva("Resposta:\t")
+      leia(simnao)
+      limpa()
+
+      se(simnao == "s" ou simnao == "sim"){
+        reiniciar = verdadeiro
+      }
+
+       senao{
+        reiniciar = falso
+      }
+
+  }
 
 
   funcao calcularIMC(){
+
     escreva("########\tCALCULADORA DE IMC\t########\n")
     escreva("Forneça um valor para peso:\t")
     leia(peso)
@@ -40,15 +58,11 @@ programa {
   }
 
 
-
   funcao inicio() {
 
     enquanto (reiniciar) {
       calcularIMC()
-      escreva("\nDeseja calcular novamente? digite 'verdadeiro' para sim e 'falso' para não:\n")
-      escreva("Resposta:\t")
-      leia(reiniciar)
+      simnao()
      }
     }
   }
-
