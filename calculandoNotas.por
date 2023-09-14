@@ -3,6 +3,11 @@ programa {
 
     cadeia materias[] = {"port","mat","hist","ing","geo"}
     cadeia periodo[] = {"1° mês", "2º mês", "3º mês"}
+    real periodo1[] = {0,0,0,0,0}
+    real periodo2[] = {0,0,0,0,0}
+    real periodo3[] = {0,0,0,0,0}
+   
+    
     real 
 
     funcao notas(){
@@ -12,11 +17,7 @@ programa {
 
     funcao calcularMedia(){
       escreva("Calculando média de notas\n")
-      escreva("Escolha um período:\n")
-      escreva("1° mês")
-      escreva("2° mês")
-      escreva("3° mês")
-      
+        
     }
 
 
@@ -25,9 +26,12 @@ programa {
 
   funcao inicio() {
      enquanto(reiniciar){
+      calcularMedia()
       simnao()
     }
   }
+
+
   funcao simnao(){
       cadeia simnao
 
@@ -45,3 +49,4 @@ programa {
         }
   }
 }
+
