@@ -1,32 +1,67 @@
 programa {
   logico reiniciar = verdadeiro
 
-    cadeia materias[] = {"port","mat","hist","ing","geo"}
-    cadeia periodo[] = {"1° mês", "2º mês", "3º mês"}
+    cadeia materias[] = {"Português","Matematica"}
+    cadeia periodo[] = {"1°"}
     real periodo1[] = {0,0,0,0,0}
     real periodo2[] = {0,0,0,0,0}
     real periodo3[] = {0,0,0,0,0}
+    real verificaMateria
+    real result //variavel que guarda o resuldado da média
    
-    
-    real 
+
 
     funcao notas(){
 
-    }
-
-
-    funcao calcularMedia(){
       escreva("Calculando média de notas\n")
-        
+
+      escreva("escolha qual materia deseja verificar as notas:\n")
+      escreva("1 - portugues\n")
+      escreva("2 - matematica\n")
+      escreva("Reposta:\t")
+      leia(verificaMateria)
+      limpa()
+          
+          se(verificaMateria == 1){
+              escreva("Calculando média de notas\n")
+              escreva("Digite as notas de ", materias[0]," do ", periodo[0], " Período\n")
+
+            escreva("nota1: ")
+            leia(periodo1[0])
+
+            escreva("nota2: ")
+            leia(periodo1[1])
+
+            escreva("nota3: ")
+            leia(periodo1[2])
+
+              result = (periodo1[0]+periodo1[1]+periodo1[2])/3 
+
+              escreva("\nA média desse aluno é ",result)
+          }
+          se(verificaMateria == 2){
+              escreva("Calculando média de notas\n")
+              escreva("Digite as notas de ", materias[1]," do ", periodo[0], " Período\n")
+
+            escreva("nota1: ")
+            leia(periodo1[0])
+
+            escreva("nota2: ")
+            leia(periodo1[1])
+
+            escreva("nota3: ")
+            leia(periodo1[2])
+
+              result = (periodo1[0]+periodo1[1]+periodo1[2])/5  
+
+              escreva("\nA média desse aluno é ",result)
+          }
+          
     }
-
-
-
-
 
   funcao inicio() {
      enquanto(reiniciar){
-      calcularMedia()
+      notas()
       simnao()
     }
   }
@@ -49,4 +84,3 @@ programa {
         }
   }
 }
-
