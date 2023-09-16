@@ -1,9 +1,9 @@
 programa {
   inclua biblioteca Util --> u
   inteiro numSecreto = u.sorteia(1,100)
+  logico reiniciar = verdadeiro
   inteiro numero
   inteiro tentativasPlayer = 0
-  logico reiniciar = verdadeiro
 
   funcao inicio1() {
     escreva("Acerte o número secreto!\nVocê tem 10 tentativas.\n")
@@ -16,6 +16,8 @@ programa {
 
         se(numero == numSecreto){
           escreva("Voçe acertou!")
+          // numSecreto = u.sorteia(1,100)
+          // tentativasPlayer = 0
           pare
         }
         se(numero < numSecreto){
@@ -34,11 +36,12 @@ programa {
         }
         se(tentativasPlayer == 10){
           limpa()
+          // numSecreto = u.sorteia(1,100)
+          // tentativasPlayer = 0
           escreva("O jogo terminou! Você já usou todos os palpites!")
         }
     }
   }
-
 
 
  funcao inicio() {
@@ -52,8 +55,10 @@ programa {
 
   funcao simnao(){
       cadeia simnao
+      numSecreto = u.sorteia(1,100)
+      tentativasPlayer = 0
 
-      escreva("\n\nCalcular novamente? digite 's' ou 'sim' para continuar calculando, ou qualquer outra tecla para finalizar:\n")
+      escreva("\n\nCalcular novamente? digite 's' ou 'sim' para continuar jogando, ou qualquer outra tecla para finalizar:\n")
       escreva("Resposta:\t")
         leia(simnao)
           limpa()
