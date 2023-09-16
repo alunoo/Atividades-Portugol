@@ -1,31 +1,69 @@
 programa {
-
   inclua biblioteca Util --> u
-  inteiro sorteio = u.sorteia(1,100)
+  inteiro numSecreto = u.sorteia(1,100)
+  inteiro numero
+  inteiro tentativasPlayer = 0
+  logico reiniciar = verdadeiro
 
-  inteiro result // variavel que guarda o numero secreto
-  inteiro respostaPlayer
+  funcao inicio1() {
+    escreva("Acerte o número secreto!\nVocê tem 10 tentativas.\n")
 
-  funcao apresentacao(){
+    enquanto(tentativasPlayer < 10){
+    
+    escreva("Palpite: " )
+      leia(numero)
+      
 
+        se(numero == numSecreto){
+          escreva("Voçe acertou!")
+          pare
+        }
+        se(numero < numSecreto){
+          limpa()
+          escreva(tentativasPlayer+2, "° palpite\n")
+          escreva(numero,"\té abaixo do Número Secreto\n")
 
-    escreva("Estou pensando em um número. Tente advinha-lo. Boa sorte!\n")
-    escreva("Começe digitando um numero inteiro de 1 a 100\n")
-    leia(respostaPlayer)
+          tentativasPlayer++
+        }
+        se(numero > numSecreto){
+          limpa()
+          escreva(tentativasPlayer+2, "° palpite\n")
+          escreva(numero,"\té acima do Numero secreto\n")
+
+        tentativasPlayer++
+        }
+        se(tentativasPlayer == 10){
+          limpa()
+          escreva("O jogo terminou! Você já usou todos os palpites!")
+        }
+    }
   }
 
-    funcao calculo(){
-      se(respostaPlayer == sorteio){
-        escreva("Você acertou!")
-      }
-      se(respostaPlayer > sorteio){
-        escreva("está acima")
-      }
-      escreva(sorteio)
+
+
+ funcao inicio() {
+    
+    enquanto(reiniciar){
+      inicio1()
+      simnao()
     }
 
+  }
 
-  funcao inicio() {
-    apresentacao()
+  funcao simnao(){
+      cadeia simnao
+
+      escreva("\n\nCalcular novamente? digite 's' ou 'sim' para continuar calculando, ou qualquer outra tecla para finalizar:\n")
+      escreva("Resposta:\t")
+        leia(simnao)
+          limpa()
+
+           se(simnao == "s" ou simnao == "sim" ou simnao == "S" ou simnao == "SIM"){
+              reiniciar = verdadeiro
+            }
+
+       senao{
+        reiniciar = falso
+        }
   }
 }
