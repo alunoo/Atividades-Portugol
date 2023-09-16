@@ -2,28 +2,30 @@ programa {
   logico reiniciar = verdadeiro
 
     cadeia materias[] = {"Português","Matematica"}
-    cadeia periodo[] = {"1°"}
+    cadeia periodo[] = {"1°","2°"}
     real periodo1[] = {0,0,0,0,0}
     real periodo2[] = {0,0,0,0,0}
     real periodo3[] = {0,0,0,0,0}
     real verificaMateria
+    real verificaPeriodo
     real result //variavel que guarda o resuldado da média
    
 
 
+
     funcao notas(){
 
-      escreva("Calculando média de notas\n")
+      escreva("CALCULANDO MÉDIA DE NOTAS\n\n")
 
-      escreva("escolha qual materia deseja verificar as notas:\n")
+      escreva("Escolha qual materia deseja digitar as notas para verificar as médias:\n\n")
       escreva("1 - portugues\n")
-      escreva("2 - matematica\n")
+      escreva("2 - matematica\n\n")
       escreva("Reposta:\t")
       leia(verificaMateria)
       limpa()
           
           se(verificaMateria == 1){
-              escreva("Calculando média de notas\n")
+              escreva("CALCULANDO MÉDIA DE NOTAS\n\n")
               escreva("Digite as notas de ", materias[0]," do ", periodo[0], " Período\n")
 
             escreva("nota1: ")
@@ -40,7 +42,7 @@ programa {
               escreva("\nA média desse aluno é ",result)
           }
           se(verificaMateria == 2){
-              escreva("Calculando média de notas\n")
+              escreva("CALCULANDO MÉDIA DE NOTAS\n\n")
               escreva("Digite as notas de ", materias[1]," do ", periodo[0], " Período\n")
 
             escreva("nota1: ")
@@ -61,6 +63,7 @@ programa {
 
   funcao inicio() {
      enquanto(reiniciar){
+      // periodoDeclarado()
       notas()
       simnao()
     }
